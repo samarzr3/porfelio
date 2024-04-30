@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slideshow</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link id='favicon' rel="shortcut icon" href="/assets/images/pixlr-image-generator-b6e6c751-6702-4d01-ae09-9e585e15a7e6.png" type="image/x-png">
+    <style>
+        #slideshow-container {
+            position: relative;
+            max-width: 800px; /* Adjust this value to the width of your images */
+            margin: 50px auto; /* Added margin to create space between navbar and slideshow */
+            padding: 0 20px; /* Added padding to create space between images */
+        }
+
+        .slide {
+            display: none;
+            width: 100%; /* Ensure images take full width of container */
+            max-width: 100%; /* Set max-width for responsive images */
+        }
+
+        .slide.active {
+            display: block;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .button {
+            cursor: pointer;
+            padding: 10px 20px;
+            background-color: transparent; /* Set background color to transparent */
+            color: #000; /* Set color to black */
+            border: none;
+            border-radius: 5px;
+            margin: 0 10px; /* Added margin to create space between buttons */
+            font-size: 24px; /* Adjust font size as needed */
+        }
+    </style>
+</head>
+<body oncontextmenu="return false">
+
+<!-- navbar starts -->
+<header>
+    <a href="/" class="logo"><i class="fab fa-node-js"></i> samar</a>
+    <div id="menu" class="fas fa-bars"></div>
+    <nav class="navbar">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="/#about">About</a></li>
+            <li><a href="/#skills">Skills</a></li>
+            <li><a href="/#education">Education</a></li>
+            <li><a class="active" href="/#work">Work</a></li>
+            <li><a href="/#experience">Experience</a></li>
+            <li><a href="/#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div id="slideshow-container">
+    <img class="slide" src="../assets/images/Certiff.PNG"/>
+    <img class="slide active" src="../assets/images/Capture.PNG"/>
+   
+</div>
+
+<div class="button-container">
+    <button class="button" onclick="prevSlide()"><i class="fas fa-chevron-left"></i></button>
+    <button class="button" onclick="nextSlide()"><i class="fas fa-chevron-right"></i></button>
+</div>
+
+<script>
+    var slideIndex = 0;
+    showSlide(slideIndex);
+
+    function prevSlide() {
+        showSlide(slideIndex -= 1);
+    }
+
+    function nextSlide() {
+        showSlide(slideIndex += 1);
+    }
+
+    function showSlide(n) {
+        var slides = document.getElementsByClassName("slide");
+
+        if (n >= slides.length) {
+            slideIndex = 0;
+        }
+
+        if (n < 0) {
+            slideIndex = slides.length - 1;
+        }
+
+        for (var i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+
+        slides[slideIndex].style.display = "block";
+    }
+</script>
+<section class="footer">
+
+    <div class="box-container">
+  
+        <div class="box">
+            <h3>Samar's Portfolio</h3>
+            <p>Thank you for visiting my personal portfolio website. Connect with me over socials. <br/> <br/> Keep Rising 🚀. Connect with me over live chat!</p>
+        </div>
+  
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="#home"><i class="fas fa-chevron-circle-right"></i> home</a>
+            <a href="#about"><i class="fas fa-chevron-circle-right"></i> about</a>
+            <a href="#skills"><i class="fas fa-chevron-circle-right"></i> skills</a>
+            <a href="#education"><i class="fas fa-chevron-circle-right"></i> education</a>
+            <a href="#work"><i class="fas fa-chevron-circle-right"></i> work</a>
+            <a href="#experience"><i class="fas fa-chevron-circle-right"></i> experience</a>
+        </div>
+  
+        <div class="box">
+            <h3>contact info</h3>
+            <p> <i class="fas fa-phone"></i>+21627079878</p>
+            <p> <i class="fas fa-envelope"></i>samarzribi014@gmail.com</p>
+            <p> <i class="fas fa-map-marked-alt"></i>Tunisia,Tunis</p>
+            <div class="share">
+  
+                <a href="https://www.linkedin.com/in/samar-zribi-bb6891208/" class="fab fa-linkedin" aria-label="LinkedIn" target="_blank"></a>
+                <a href="https://github.com/jigar-sable" class="fab fa-github" aria-label="GitHub" target="_blank"></a>
+                <a href="mailto:jigarsable21@gmail.com" class="fas fa-envelope" aria-label="Mail" target="_blank"></a>
+                <a href="https://twitter.com/jigar_sable" class="fab fa-twitter" aria-label="Twitter" target="_blank"></a>
+                <a href="https://t.me/lifecode5" class="fab fa-telegram-plane" aria-label="Telegram" target="_blank"></a>
+            </div>
+        </div>
+    </div>
+  
+    <h1 class="credit">Designed with <i class="fa fa-heart pulse"></i> by <a href="https://www.linkedin.com/in/samar-zribi-bb6891208/"> Samar zribi</a></h1>
+  
+  </section>
+  <!-- footer section ends -->
+  
+  
+  <!-- scroll top btn -->
+  <a href="#home" aria-label="ScrollTop" class="fas fa-angle-up" id="scroll-top"></a>
+  <!-- scroll back to top -->
+  
+  
+  <!-- ==== ALL MAJOR JAVASCRIPT CDNS STARTS ==== -->
+  <!-- jquery cdn -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
+  <!-- typed.js cdn -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js" integrity="sha512-1KbKusm/hAtkX5FScVR5G36wodIMnVd/aP04af06iyQTkD17szAMGNmxfNH+tEuFp3Og/P5G32L1qEC47CZbUQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
+  <!-- particle.js links -->
+  <script src="./assets/js/particles.min.js"></script>
+  <script src="./assets/js/app.js"></script>
+  
+  <!-- vanilla tilt.js links -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js" integrity="sha512-SttpKhJqONuBVxbRcuH0wezjuX+BoFoli0yPsnrAADcHsQMW8rkR84ItFHGIkPvhnlRnE2FaifDOUw+EltbuHg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
+  <!-- scroll reveal anim -->
+  <script src="https://unpkg.com/scrollreveal"></script>
+  
+  <script
+        type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
+      ></script>
+  
+  <!-- ==== ALL MAJOR JAVASCRIPT CDNS ENDS ==== -->
+  
+  <script src="./assets/js/script.js"></script>
+</body>
+</html>

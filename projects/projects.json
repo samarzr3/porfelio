@@ -1,0 +1,55 @@
+[
+  {
+    "name": "Tawelti",
+    "desc": "Fully fledged android CRUD app based on different design patterns. Built using React Native, MongoDB, Firebase, Socket, MVVM.",
+    "image": "tawelti",
+    "category": "android",
+    "links": {
+      "view": "#",
+      "code": "https://github.com/Tawelti/tawelti"
+    }
+  },
+  {
+    "name": "Luminex",
+    "desc": "web page . Built using HTML, CSS and JS.",
+    "image": "Lim",
+    "category": "basicweb",
+    "links": {
+      "view": "#",
+      "code": "#"
+    }
+  },
+  {
+    "name": "dashboard",
+    "desc": "Full-Stack project dashboard Built using NodeJS / ExpressJS / MongoDb / ReactJS .",
+    "image": "dashboard",
+    "category": "mern",
+    "links": {
+      "view": "#",
+      "code": "#"
+    }
+  },
+  {
+    "name": "Movie App",
+    "desc": "Movie App using ReactJS , Firebase .",
+    "image": "movie",
+    "category": "lamp",
+    "links": {
+      "view": "#",
+      "code": "#"
+    }
+  },
+ 
+  {
+    "name": "Food Website",
+    "desc": "Basic food website built using HTML, CSS, js.",
+    "image": "food",
+    "category": "basicweb",
+    "links": {
+      "view": "#",
+      "code": "#"
+    }
+  }
+
+
+]
